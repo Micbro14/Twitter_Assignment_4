@@ -85,7 +85,10 @@
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="lDV-Ow-QcW"/>
                                             </constraints>
                                             <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" image="retweet-icon"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="retweet-icon" title=""/>
+                                            <connections>
+                                                <action selector="retweet:" destination="TfI-C0-qxt" eventType="touchUpInside" id="rWd-px-wLg"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0EY-OB-T83">
                                             <rect key="frame" x="307" y="152" width="44" height="30"/>
@@ -95,7 +98,10 @@
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="dXK-wF-UAO"/>
                                             </constraints>
                                             <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" image="favor-icon"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="favor-icon" title=""/>
+                                            <connections>
+                                                <action selector="FavoriteTweet:" destination="TfI-C0-qxt" eventType="touchUpInside" id="bj4-YX-mXl"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -119,9 +125,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="favButton" destination="0EY-OB-T83" id="sky-Mr-aFj"/>
+                                    <outlet property="favButton" destination="0EY-OB-T83" id="9Os-1S-fr5"/>
                                     <outlet property="profileImageView" destination="6Lc-20-CQl" id="hyN-yq-D2w"/>
-                                    <outlet property="retweetButton" destination="Mi2-vQ-Pzz" id="Ze4-Xk-FD6"/>
+                                    <outlet property="retweetButton" destination="Mi2-vQ-Pzz" id="vaW-5c-soI"/>
                                     <outlet property="tweetContent" destination="UYA-BU-65L" id="3f9-QO-wrZ"/>
                                     <outlet property="userNameLabel" destination="YgL-Hb-ttV" id="eJa-Kf-B5l"/>
                                 </connections>
@@ -175,8 +181,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YOp-Vn-c49">
-                                <rect key="frame" x="0.0" y="88" width="375" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YOp-Vn-c49">
+                                <rect key="frame" x="0.0" y="56" width="375" height="160"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -189,6 +195,7 @@
                             <constraint firstItem="YOp-Vn-c49" firstAttribute="top" secondItem="cCJ-4c-Fb8" secondAttribute="top" id="1xd-YD-LaQ"/>
                             <constraint firstItem="cCJ-4c-Fb8" firstAttribute="trailing" secondItem="YOp-Vn-c49" secondAttribute="trailing" id="Aim-V5-l7X"/>
                             <constraint firstItem="YOp-Vn-c49" firstAttribute="leading" secondItem="cCJ-4c-Fb8" secondAttribute="leading" id="d2A-UM-kO7"/>
+                            <constraint firstItem="cCJ-4c-Fb8" firstAttribute="bottom" secondItem="YOp-Vn-c49" secondAttribute="bottom" constant="431" id="wsB-5l-Ywl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nC0-is-eDn">
